@@ -55,9 +55,14 @@ function renderDropDown(){
   })
 }
 
-
-
 // use and event handler to respond when the user choses an option from the select menu.
+
+$('select').change(function(e){
+  $('img').parent().hide();
+  let selected = e.target.value;
+  $(`img[alt=${selected}]`).parent().show();
+  console.log(e);
+})
 
 
 // hide all of the images, then show those whose keyword matches the option chosen
