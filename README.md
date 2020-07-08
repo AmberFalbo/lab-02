@@ -9,7 +9,7 @@ Start Time: 1:55 PM
 
 Finish Time: 2:27 PM
 
-Actual Time needed to complete: 32
+Actual Time needed to complete: 32 minutes
 
 
 
@@ -24,12 +24,12 @@ Finish Time: 4:42 PM
 Actual Time needed to complete: 122 minutes
 
 
-Feature 2: Style the Application
+Feature 3: Style the Application
 
 Estimate Time needed to complete: 60 minutes
 
 Start Time: 4:47 PM
 
-Finish Time: 
+Finish Time: 5:10 PM
 
-Actual Time needed to complete: 
+Actual Time needed to complete: 23 minutes
