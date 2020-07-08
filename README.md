@@ -33,3 +33,20 @@ Start Time: 4:47 PM
 Finish Time: 5:10 PM
 
 Actual Time needed to complete: 23 minutes
+
+301-Lab-03
+
+Feature 1: Pagination
+
+Estimate Time needed to complete: 60 minutes
+
+Start Time: 2:19 PM
+
+Finish Time: 4:05 PM
+
+Actual Time needed to complete: 1hr 45min
+
+
+Resources:
+
+Contributors: Matthew Herriges and Amber Falbo
