@@ -1,0 +1,17 @@
+h1 {
+  font-family: 'Modak', cursive;
+  font-size: 70px;
+  color: purple;
+  text-align: center;
+}
+
+
+section {
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+
+footer {
+  clear: both;
+}

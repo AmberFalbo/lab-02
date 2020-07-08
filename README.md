@@ -23,3 +23,13 @@ Finish Time: 4:42 PM
 
 Actual Time needed to complete: 122 minutes
 
+
+Feature 2: Style the Application
+
+Estimate Time needed to complete: 60 minutes
+
+Start Time: 4:47 PM
+
+Finish Time: 
+
+Actual Time needed to complete: 

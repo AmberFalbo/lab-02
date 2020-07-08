@@ -7,7 +7,6 @@ $.ajax('data/page-1.json', {method: 'GET', datatype: 'JSON'})
     data.forEach(obj => {
       // feed ajax through constructor function
       let newItem = new Horns(obj);
-      
       newItem.hornBuilder();
       newItem.dropDownBuilder();
     });

@@ -1,0 +1,22 @@
+img {
+  height: 50%;
+}
+
+h2 {
+  font-family: 'Modak', cursive;
+  font-size: 35px;
+}
+
+p {
+  font-size: 20px;
+
+}
+
+img {
+  height: 50%;
+}
+
+#photo-template {
+  width: 0px;
+  height: 0px;
+}
