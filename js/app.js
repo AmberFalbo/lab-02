@@ -2,16 +2,28 @@
 const dropDownItems = [];
 const dropDownItemsTwo = [];
 
+const pageOneItems = [];
+const pageTwoItems = [];
+
 // grab page-1.json w/ajax
 $.ajax('data/page-1.json', {method: 'GET', datatype: 'JSON'})
   .then(data => {
+    
     data.forEach(obj => {
       // feed ajax through constructor function
       let newItem = new HornsOne(obj);
       newItem.dropDownBuilder();
-      $('div:first-of-type').append(newItem.createHtml());
-
     });
+    
+    pageOneItems.sort((a,b) => {
+      if(a.title.toUpperCase() > b.title.toUpperCase()) {
+        return 1
+      } else if (b.title.toUpperCase() > a.title.toUpperCase()){
+        return -1
+      }
+    })
+
+    createHtml(pageOneItems, 'div:first-of-type');
     renderDropDown(dropDownItems);
   })
 
@@ -22,10 +34,19 @@ $.ajax('data/page-2.json', {method: 'GET', datatype: 'JSON'})
       // feed ajax through constructor function
       let newItem = new HornsTwo(obj);
       newItem.dropDownBuilder();
-      $('div:last-of-type').append(newItem.createHtml());
-      $('div:last-of-type').hide();
     });
-  })
+
+    pageTwoItems.sort((a,b) => {
+      if(a.title.toUpperCase() > b.title.toUpperCase()) {
+        return 1
+      } else if (b.title.toUpperCase() > a.title.toUpperCase()){
+        return -1
+      }
+    })
+
+    createHtml(pageTwoItems, 'div:last-of-type');
+    $('div:last-of-type').hide();
+    })
 
 // constructor function
 function HornsOne(obj){
@@ -34,6 +55,7 @@ function HornsOne(obj){
   this.title = obj.title;
   this.description = obj.description;
   this.horns = obj.horns;
+  pageOneItems.push(this);
 }
 
 // constructor function for HornsTwo
@@ -43,6 +65,7 @@ function HornsTwo(obj){
   this.title = obj.title;
   this.description = obj.description;
   this.horns = obj.horns;
+  pageTwoItems.push(this);
 }
 
 // jquery copy html template. make copy of html template
@@ -57,15 +80,14 @@ HornsOne.prototype.dropDownBuilder = function(){
   }
 }
 
-
-
-HornsOne.prototype.createHtml = function(){
+function createHtml(arr, div){
+  $(div).empty();
   let template = $('#horn-template').html();
-  let html = Mustache.render(template, this);
-  return html;
+  arr.forEach(value => {
+    let html = Mustache.render(template, value);
+    $(div).append(html);
+  })
 }
-
-
 
 // jquery copy html template. make copy of html template for HornsTwo
 
@@ -79,11 +101,6 @@ HornsTwo.prototype.dropDownBuilder = function(){
   }
 }
 
-HornsTwo.prototype.createHtml = function(){
-  let template = $('#horn-template').html();
-  let html = Mustache.render(template, this);
-  return html;
-}
 
 function renderDropDown(arr){
   const dropDown = $(`select`);
@@ -117,4 +134,50 @@ $('#pageChange').click(function(){
   }
   $('div:first-of-type').toggle();
   $('div:last-of-type').toggle();
+})
+
+$('#sortByTitle').click(function(){
+  pageOneItems.sort((a,b) => {
+    if(a.title.toUpperCase() > b.title.toUpperCase()) {
+      return 1
+    } else if (b.title.toUpperCase() > a.title.toUpperCase()){
+      return -1
+    }
+  })
+
+  createHtml(pageOneItems, 'div:first-of-type');
+
+  pageTwoItems.sort((a,b) => {
+    if(a.title.toUpperCase() > b.title.toUpperCase()) {
+      return 1
+    } else if (b.title.toUpperCase() > a.title.toUpperCase()){
+      return -1
+    }
+  })
+
+  createHtml(pageTwoItems, 'div:last-of-type');
+
+})
+
+$('#sortByHorns').click(function(){
+  pageOneItems.sort((a,b) => {
+    if(a.horns > b.horns) {
+      return 1
+    } else if (b.horns > a.horns){
+      return -1
+    }
+  })
+
+  createHtml(pageOneItems, 'div:first-of-type');
+
+  pageTwoItems.sort((a,b) => {
+    if(a.horns > b.horns) {
+      return 1
+    } else if (b.horns > a.horns){
+      return -1
+    }
+  })
+
+  createHtml(pageTwoItems, 'div:last-of-type');
+
 })
