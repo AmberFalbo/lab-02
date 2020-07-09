@@ -50,3 +50,18 @@ Actual Time needed to complete: 1hr 45min
 Resources:
 
 Contributors: Matthew Herriges and Amber Falbo
+
+Feature 2: Templating
+
+Estimate Time needed to complete: 30 minutes
+
+Start Time: 4:33 PM
+
+Finish Time:  PM
+
+Actual Time needed to complete: 
+
+
+Resources:
+
+Contributors: Matthew Herriges and Amber Falbo
