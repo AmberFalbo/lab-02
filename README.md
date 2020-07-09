@@ -47,7 +47,6 @@ Finish Time: 4:05 PM
 Actual Time needed to complete: 1hr 45min
 
 
-Resources:
 
 Contributors: Matthew Herriges and Amber Falbo
 
@@ -57,11 +56,33 @@ Estimate Time needed to complete: 30 minutes
 
 Start Time: 4:33 PM
 
-Finish Time:  PM
+Finish Time: 5:00 PM
 
-Actual Time needed to complete: 
+Actual Time needed to complete: 27 minutes
 
 
-Resources:
+
+Feature 3: Styling with Flexbox
+
+Estimate Time needed to complete: 30 minutes
+
+Start Time: 5:00 PM
+
+Finish Time: 5:21 PM
+
+Actual Time needed to complete: 21 minutes
+
+
+Feature : Sort the Images
+
+Estimate Time needed to complete: 30 minutes
+
+Start Time: 5:21 PM
+
+Finish Time: 6:18
+
+Actual Time needed to complete: 57 minutes
+
+
 
 Contributors: Matthew Herriges and Amber Falbo
